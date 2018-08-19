@@ -1,0 +1,46 @@
+.profileView {
+    padding: 0 5em;
+    overflow-y: scroll;
+}
+.hidden {
+    display:none;
+}
+.user {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.user-pic {
+    grid-area: pic;
+    margin: auto;
+}
+.user-info {
+    grid-area: info;
+}
+
+@media (max-width: 800px) {
+    .profileView {
+        padding: 0 2em;
+    }
+    .user {
+        grid-template-areas:
+        "pic"
+        "info";
+        text-align:center;
+    }
+    .user-pic {
+        margin-top: 2em;
+    }
+    .user-info h3 {
+        font-size: 16px;
+    }
+}
+@media (min-width: 800px) {
+    .profileView {
+        padding: 0 5em;
+    }
+    .user {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "pic info";
+    }
+}

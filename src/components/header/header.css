@@ -1,0 +1,58 @@
+.header {
+    background-color: black;
+    padding: 0 1em;
+    color: white;
+    display:grid;
+    /* justify-content: center; */
+    align-items: center;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: "logo filters util"
+}
+.logo {
+    grid-area: "logo";
+    font-family: 'Catamaran', sans-serif;
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    max-height:80%;
+    font-size: 20px;
+    display: inline-block;
+    transition: color 400ms;
+}
+.hidden {
+    display:none;
+}
+.filter-buttons {
+    list-style-type: none;
+    margin: 0;
+    padding:0 20px;
+    overflow-x: scroll;
+}
+.filter {
+    display:inline-block;
+    margin: 10px
+}
+.filter:hover {
+    color: lightskyblue;
+}
+.header-button {
+    grid-area: "util";
+    width:100%;
+    border: white solid 0.1em;
+    text-align:center;
+    border-radius: 8px;
+    transition: color 400ms, border-color 400ms;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.header-button:hover {
+    color:lightskyblue;
+    border-color: lightskyblue;
+}
+
+@media (max-width: 435px) {
+    .header {
+        font-size: 11px;
+    }
+}

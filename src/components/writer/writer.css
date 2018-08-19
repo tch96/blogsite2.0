@@ -1,0 +1,11 @@
+.writer {
+    border: thick green solid;
+    width:60%;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.uploadIcon {
+    border: lightblue solid;
+    color:black;
+}

@@ -1,0 +1,53 @@
+.postView {
+    overflow-y: scroll;
+    padding: 0 5em;
+}
+.postView .post-subinfo {
+    margin: 1em 0;
+}
+.postView .title {
+    margin-bottom:0.1em;
+}
+.postView .post-subinfo {
+    grid-template-columns: 1fr 3fr 2fr;
+}
+.post-likes {
+    display: inline-block;
+    color: black;
+}
+.post-likes > i {
+    color: lightgray;
+    font-size: 16px;
+}
+.post-likes > i:hover {
+    color: black;
+}
+.description {
+    color: lightgray;
+    font-style: italic;
+}
+.comment-section {
+    border-top: solid thin lightgray;
+    padding: 1em 0;
+}
+.commentBox {
+    border: thin solid black;
+    font-size: 12px;
+    height: 50px;
+    margin-bottom: 2em;
+    border-radius: 2px;
+}
+.comment-author {
+    text-decoration: none;
+    color:black;
+}
+.comment-author:hover {
+    text-decoration: underline;
+}
+.comment-content {
+    margin: 0.5em;
+    padding: 0 1em;
+}
+.comment {
+    margin: 0 0 1em 0;
+}

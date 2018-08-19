@@ -1,0 +1,15 @@
+.App {
+  height: 100vh;
+  width:100vw;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-rows: 1fr 15fr;
+  grid-template-areas:
+  "header"
+  "content"
+}
+p {
+  white-space: pre-wrap;
+  font-family: 'Source Sans Pro', sans-serif;
+}
