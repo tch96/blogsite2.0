@@ -32,7 +32,6 @@ PostSchema.methods.addAuthor = function (author_id) {
 }
 
 PostSchema.methods.comment = function(comment) {
-    console.log(comment, 'comment???');
     this.comments.push(comment)
     return this.save()
 }

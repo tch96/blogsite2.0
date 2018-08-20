@@ -61,7 +61,6 @@ module.exports = {
     },
     // params: post_id
     commentPost: (req, res, next) => {
-        console.log(req.body, 'body');
         Post.findById(req.body.post_id).then((post) => {
             if (!post) res.send(400);
             else {

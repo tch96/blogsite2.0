@@ -11,7 +11,6 @@ class Feed extends Component {
     }
 
     render() {
-        console.log(this.props.posts, 'posts');
         const posts = this.props.posts.slice().reverse().map((post) =>
             <div className="post" key={post._id}>
                 <Link to={`/post/${post._id}`} className="post-title"> {post.title} </Link>

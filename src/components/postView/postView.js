@@ -66,7 +66,6 @@ class PostView extends Component {
     render() {
         let post, comments;
         if (!_.isEmpty(this.props.post)) {
-            console.log(this.props.post);
             post = 
                 <div className="post-info">
                     <h1 className="title"> {this.props.post.title} </h1>

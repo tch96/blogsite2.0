@@ -57,10 +57,7 @@ class Writer extends Component {
         formData.append('description', this.state.description);
         formData.append('author_id', this.props.user._id);
 
-        console.log(this.state.editorState.getCurrentContent().getPlainText(), 'text');
-
         axios.post(`${url}create`, formData).then(() => {
-            console.log('post published');
             this.setState({ published: true });
         })
     }

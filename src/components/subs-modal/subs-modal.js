@@ -8,7 +8,6 @@ class SubsList extends Component {
     render() {
         let subs, subTo;
         if (this.props.subs) {
-            console.log(this.props.profile.user.subscribers);
             subs = this.props.profile.user.subscribers.slice().map((sub) =>
                 <div className="subs" key={`sub-${sub._id}`}>
                     <img src={sub.provider_img} style={{maxWidth: 100+'%', maxHeight: 100+'%'}} alt="provider_img"/>

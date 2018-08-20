@@ -11,10 +11,8 @@ export default (state=initialState, action) => {
     switch (action.type) {
         case 'LOAD_POSTS':
             let posts = action.posts.slice();
-            console.log(posts, 'posts');
             switch (parseInt(action.filter, 10)) {
                 case Filter.TIME:
-                    console.log("time");
                     posts.sort(function(a, b) {
                         let timestampA = a._id.toString().substring(0,8);
                         let timestampB = b._id.toString().substring(0,8);
@@ -23,13 +21,11 @@ export default (state=initialState, action) => {
                     })
                 break;
                 case Filter.RATING:
-                    console.log("rating");
                     posts.sort(function(a,b) {
                         return a.likes-b.likes
                     })
                 break;
                 case Filter.FRIENDS:
-                    console.log("friends");
                     posts.sort(function(a,b) {
                         let subbedToA = a.author.subscribers.includes(action._id);
                         let subbedToB = b.author.subscribers.includes(action._id);

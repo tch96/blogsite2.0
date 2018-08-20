@@ -17,7 +17,6 @@ class SignIn extends Component {
             }
             this.props.SignInUser(user_data);
             this.props.toggleClose();
-            console.log(user_data);
         }
 
         const logoutGoogle = () => {
