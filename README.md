@@ -8,17 +8,15 @@ Viewable @ https://timmys-blogsite.herokuapp.com
 Copy the current repo using the following command: <br />
 ```git clone https://github.com/tch96/blogsite2.0.git```
 <br/>
-Install the dependencies using npm:
+Install the dependencies using npm: <br/>
 ```npm install```
 <br/>
-To run for development, run the client & server concurrently, using the following command:
+To run for development, run the client & server concurrently, using the following command: <br/>
 ```npm run client```
 <br/>
 ```npm run start```
 <br/>
 Happy Hacking!
-
-<br/>
 <br/>
 
 ### To Deploy
