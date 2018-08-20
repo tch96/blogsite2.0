@@ -31,12 +31,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(helmet());
 
-app.use(express.static(`${__dirname}/../public`));
+app.use(express.static(`${__dirname}/../build`));
 
 app.use('/api', router);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve)(`${__dirname}/../public/index.html`)
+    res.sendFile(path.resolve)(`${__dirname}/../build/index.html`)
 })
 
 
