@@ -3,13 +3,11 @@
     padding: 0 1em;
     color: white;
     display:grid;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-areas: "logo filters util"
 }
 .logo {
-    grid-area: "logo";
     font-family: 'Catamaran', sans-serif;
     text-decoration: none;
     color:white;
@@ -23,20 +21,28 @@
     display:none;
 }
 .filter-buttons {
+    height:100%;
     list-style-type: none;
     margin: 0;
     padding:0 20px;
-    overflow-x: scroll;
 }
 .filter {
+    cursor: pointer;
     display:inline-block;
-    margin: 10px
+    margin: 0;
+    height: 100%;
+    padding:0 10px;
 }
 .filter:hover {
     color: lightskyblue;
 }
+.headerBtn-container {
+    height: 100%;
+    display:grid;
+    justify-content: center;
+    align-items:center;
+}
 .header-button {
-    grid-area: "util";
     width:100%;
     border: white solid 0.1em;
     text-align:center;
@@ -54,5 +60,12 @@
 @media (max-width: 435px) {
     .header {
         font-size: 11px;
+    }
+    .logo {
+        font-size:13px;
+    }
+    .filter-buttons {
+        padding: 0;
+        text-align: center;
     }
 }

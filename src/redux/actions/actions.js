@@ -126,3 +126,17 @@ export function toggleOpen() {
         dispatch({type: 'TOGGLE_MODAL', modalMode: true});
     }
 }
+
+export function toggleSubsClose() {
+    return (dispatch) => {
+        dispatch({type: 'TOGGLE_SUBS_MODAL', subsModalMode: false});
+    }
+}
+
+// subs: (true) for toggle subscribers, (false) fro toggle subscribedTo
+export function toggleSubsOpen(subs) {
+    return (dispatch) => {
+        console.log('open');
+        dispatch({type: 'TOGGLE_SUBS_MODAL', subsModalMode: true, subs:subs});
+    }
+}

@@ -6,6 +6,7 @@ import Feed from './components/feed/feed';
 import SignIn from './components/signIn/signIn';
 import authGuard from './utils/authGuard';
 import Writer from './components/writer/writer';
+import SubsModal from './components/subs-modal/subs-modal';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
 
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <SignIn /> 
+        <SubsModal />
           <Switch>
             <Route exact path="/" component={Feed} />
             <Route path="/profile/:id" component={Profile} />

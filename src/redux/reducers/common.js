@@ -1,5 +1,8 @@
 const defaultState = {
-    modalMode: false
+    modalMode: false,
+    subsModalMode: false,
+    subs: false,
+    subTo: false
 }
 
 export default (state = defaultState, action) => {
@@ -8,6 +11,13 @@ export default (state = defaultState, action) => {
             return {
                 ...state,
                 modalMode: action.modalMode
+            }
+        case 'TOGGLE_SUBS_MODAL':
+            return {
+                ...state,
+                subsModalMode: action.subsModalMode,
+                subs: action.subs,
+                subTo: !action.subs
             }
         default:
             return state;

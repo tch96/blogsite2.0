@@ -35,11 +35,19 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <Link to={`/`} className="logo">BLOGSITE</Link>
+                <div className="headerBtn-container">
+                    <Link to={`/`} className="logo">BLOGSITE</Link>
+                </div>
                 <ul className="filter-buttons">
-                    <li className="filter" onClick={this.filterRecent}>Recent</li>
-                    <li className="filter" onClick={this.filterRating}>Top</li>
-                    <li className={`filter ${this.props.isAuth ? '':'hidden'}`} onClick={this.filterSubs}>Subscribed</li>  
+                    <li className="filter" onClick={this.filterRecent}>
+                        <div className="headerBtn-container">Recent</div>
+                    </li>
+                    <li className="filter" onClick={this.filterRating}>
+                        <div className="headerBtn-container">Top</div>
+                    </li>
+                    <li className={`filter ${this.props.isAuth ? '':'hidden'}`} onClick={this.filterSubs}>
+                        <div className="headerBtn-container">Subscribed</div>
+                    </li>  
                 </ul>
                 <a className={`header-button ${this.props.isAuth ? 'hidden':''}`} onClick={this.props.toggleOpen}>Signin/Signup</a>
                 <Link to={`/editor`} className={`header-button ${this.props.isAuth ? '':'hidden'}`}> Editor </Link>

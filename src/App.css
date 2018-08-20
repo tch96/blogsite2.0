@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
   display: grid;
-  grid-template-rows: 1fr 15fr;
+  grid-template-rows: 1fr 17fr;
   grid-template-areas:
   "header"
   "content"

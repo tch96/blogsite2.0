@@ -1,11 +1,47 @@
+.editor .subsection {
+    padding: 1em 10%;
+}
 .writer {
-    border: thick green solid;
-    width:60%;
+    border: thin solid lightgray;
+    margin-bottom: 1em;
     height: 400px;
     overflow-y: scroll;
 }
-
+::placeholder {
+    color: lightgray
+}
+input {
+    border:none;
+}
+input[type=text] {
+    height: 1.5em;
+    font-size: 30px;
+    width: 100%;
+}
+input[type=textarea] {
+    margin:auto;
+    height:50px;
+    width: 100%;
+    font-size:18px;
+    color: lightgray;
+    font-style: italic;
+}
 .uploadIcon {
-    border: lightblue solid;
+    font-size: 16px;
+    cursor: pointer;
     color:black;
+    margin-bottom: 1em;
+}
+#postBtn {
+    font-size: 16px;
+    width: 100px;
+    background-color: white;
+    border: thin solid #435078;
+    color:#435078;
+    border-radius: 8px;
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+#postBtn:hover {
+    background-color: #435078;
+    color:white;
 }

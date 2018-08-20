@@ -1,6 +1,14 @@
-.postView {
+.extsection {
     overflow-y: scroll;
-    padding: 0 5em;
+    padding: 0 6em;
+}
+.subsection {
+    background-color: white;
+    margin: 1em; 
+    border-radius: 10px;
+}
+.postView .subsection {
+    padding: 0.5em 2em;
 }
 .postView .post-subinfo {
     margin: 1em 0;
@@ -50,4 +58,15 @@
 }
 .comment {
     margin: 0 0 1em 0;
+}
+@media (min-width: 481px) and (max-width: 800px) {
+    .extsection {
+        padding: 0 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .extsection {
+        padding: 0 0.5em;
+    }
 }

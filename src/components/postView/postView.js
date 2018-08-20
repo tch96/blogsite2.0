@@ -101,23 +101,25 @@ class PostView extends Component {
         }
 
         return (
-            <div className="postView">
-                {post}
-                <br />
-                <div className="comment-section">
-                    <span>Comments</span>
-                    <div className="commentBox" onClick={this.focus}>
-                        <Editor 
-                            placeholder = {`Write a comment`}
-                            editorState = {this.state.editorState}
-                            onChange = {this.onChange}
-                            plugins={[focusPlugin]}
-                            ref={(element) => {this.editor = element;}}
-                            handleKeyCommand={this.handleKeyCommand}
-                            keyBindingFn = {this.myKeyBindingFn}
-                        />
+            <div className="postView extsection">
+                <div className="subsection">
+                    {post}
+                    <br />
+                    <div className="comment-section">
+                        <span>Comments</span>
+                        <div className="commentBox" onClick={this.focus}>
+                            <Editor 
+                                placeholder = {`Write a comment`}
+                                editorState = {this.state.editorState}
+                                onChange = {this.onChange}
+                                plugins={[focusPlugin]}
+                                ref={(element) => {this.editor = element;}}
+                                handleKeyCommand={this.handleKeyCommand}
+                                keyBindingFn = {this.myKeyBindingFn}
+                            />
+                        </div>
+                        {comments}
                     </div>
-                    {comments}
                 </div>
             </div>
         )

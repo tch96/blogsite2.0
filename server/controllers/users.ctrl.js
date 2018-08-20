@@ -5,8 +5,8 @@ const _ = require('lodash');
 module.exports = {
     addUser: (req, res, next) => {
         User.findOne({'email': req.body.email})
-        .populate('subscribers', 'name provider_img')
-        .populate('subscribedTo', 'name provider_img')
+        .populate('subscribers', '_id')
+        .populate('subscribedTo', '_id')
         .exec((err, user) => {
             console.log(user, "user");
             if (err) res.send(err);
@@ -68,8 +68,8 @@ module.exports = {
     // params: id (current user)
     getUserProfile: (req, res, next) => {
         User.findById(req.params.id)
-        .populate('subscribedTo', 'name')
-        .populate('subscribers', 'name')
+        .populate('subscribedTo', 'name provider_img')
+        .populate('subscribers', 'name provider_img')
         .exec(function (err, user) {
             if (err) {res.send(err);}
             else if (!user) {res.send(400);}

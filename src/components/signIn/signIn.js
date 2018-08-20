@@ -46,7 +46,7 @@ class SignIn extends Component {
         }
 
         return (
-            <div className={["sign-in-modal", this.props.modalMode ? '':'hidden'].join(' ')}>
+            <div className={["modal", this.props.modalMode ? '':'hidden'].join(' ')}>
                 <a className="close-btn" onClick={this.props.toggleClose}>&#x2715;</a>
                 <span className="sign-in-label"> Sign In: </span>
                 {loginBtn}
