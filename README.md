@@ -7,17 +7,17 @@ Viewable @ https://timmys-blogsite.herokuapp.com
 ### To Install and Run Repo
 Copy the current repo using the following command: <br />
 ```git clone https://github.com/tch96/blogsite2.0.git```
-<br/>
+<br/><br/>
 Install the dependencies using npm: <br/>
 ```npm install```
-<br/>
+<br/><br/>
 To run for development, run the client & server concurrently, using the following command: <br/>
 ```npm run client```
 <br/>
 ```npm run start```
-<br/>
+<br/><br/>
 Happy Hacking!
-<br/>
+<br/><br/>
 
 ### To Deploy
 Use the following command to generate the build config using react-scripts:
