@@ -10,7 +10,7 @@ const path = require('path');
 const app = express();
 const router = express.Router();
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/blogsite';
-const PORT = 2715 || process.env.PORT;
+const PORT = process.env.PORT || 2715;
 
 cloudinary.config({
     cloud_name: 'dcf75gz8i',
@@ -35,7 +35,7 @@ app.use(express.static(`${__dirname}/../public`));
 
 app.use('/api', router);
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.resolve)(`${__dirname}/../public/index.html`)
 })
 
